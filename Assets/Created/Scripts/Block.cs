@@ -16,6 +16,8 @@ public class Block : MonoBehaviour
 
     private void OnDestroy() {
         rm.AddResource( material, value );
+        
+        //TODO: block destruction animation
     }
 
     RaycastHit hit;
@@ -27,6 +29,7 @@ public class Block : MonoBehaviour
             gm.EndBlock( gameObject );
         } else {
             if (!gm.blockPreviewList.Contains(gameObject)) {
+                //TODO: delay before dropping
                 GetComponent<Rigidbody>().isKinematic = false;
                 transform.position += new Vector3( 0, -gm.gravity, 0 ) * Time.deltaTime;
             }
