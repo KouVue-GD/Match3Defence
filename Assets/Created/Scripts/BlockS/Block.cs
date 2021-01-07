@@ -31,6 +31,9 @@ public class Block : MonoBehaviour
             if (!gm.blockPreviewList.Contains(gameObject)) {
                 //TODO: delay before dropping
                 GetComponent<Rigidbody>().isKinematic = false;
+
+                //TODO: change how gravity works
+                //prefabally something like add force 
                 transform.position += new Vector3( 0, -gm.gravity, 0 ) * Time.deltaTime;
             }
             

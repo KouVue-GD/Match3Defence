@@ -5,7 +5,7 @@ using UnityEngine;
 public class LightIntensityBeat : MonoBehaviour
 {
 
-    public Light light;
+    public Light light1;
     public float maxIntensity;
     public float minIntensity;
     public float speed;
@@ -20,14 +20,14 @@ public class LightIntensityBeat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (light.intensity < maxIntensity && dimming == false) {
-            light.intensity += Time.deltaTime * speed;
+        if (light1.intensity < maxIntensity && dimming == false) {
+            light1.intensity += Time.deltaTime * speed;
         }else {
             dimming = true;
         }
         
-        if ( light.intensity > minIntensity && dimming == true ) {
-            light.intensity -= Time.deltaTime * speed;
+        if ( light1.intensity > minIntensity && dimming == true ) {
+            light1.intensity -= Time.deltaTime * speed;
         } else {
             dimming = false;
         }

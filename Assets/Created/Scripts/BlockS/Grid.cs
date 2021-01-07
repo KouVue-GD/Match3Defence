@@ -87,12 +87,12 @@ public class Grid : MonoBehaviour
 
         leftBoundry.transform.localScale = new Vector3( 1, 10, ( padding + gridHeight + ( gridHeight * spacing ) ) );
         holder = leftBoundry.transform.position;
-        holder.x = listOfSlots[ 0 ].transform.position.x - 0.5f - padding - .3f;
+        holder.x = listOfSlots[ 0 ].transform.position.x - slot.transform.localScale.x - padding;
         leftBoundry.transform.position = holder;
 
         rightBoundry.transform.localScale = new Vector3( 1, 10, ( padding + gridHeight + ( gridHeight * spacing ) ) );
         holder = rightBoundry.transform.position;
-        holder.x = listOfSlots[ gridWidth - 1 ].transform.position.x + 0.5f + padding + .3f;
+        holder.x = listOfSlots[ gridWidth - 1 ].transform.position.x + slot.transform.localScale.x + padding;
         rightBoundry.transform.position = holder;
     }
 

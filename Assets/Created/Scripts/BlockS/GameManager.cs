@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    /*
+     * Contains the slots or a copy of grid to modify
+     * 
+     * 
+     * */
     public GameObject gridGameObject;
     Grid grid;
 
@@ -142,7 +147,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    public List<GameObject> GetListOfSlots() {
+        return listOfSlots;
+    }
 
     //checks around target
     //if found checks around that target
@@ -226,7 +233,7 @@ public class GameManager : MonoBehaviour
      * 
      */
 
-    //TODO: change gravity
+    //TODO: change Move to apply physics
 
     private void MoveBlock() {
 
